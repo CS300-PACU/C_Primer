@@ -28,7 +28,8 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 # other than the newline after the \.  A blank space after the \ gives errors. 
 
 TARGETS=bin/printf bin/scanf bin/commandLineArguments \
- bin/passByReference bin/define bin/struct bin/constants bin/math
+ bin/passByReference bin/define bin/struct bin/constants bin/math \
+ bin/memoryLayout
  
 all: bin ${TARGETS}
 
