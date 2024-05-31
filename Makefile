@@ -28,12 +28,18 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 # other than the newline after the \.  A blank space after the \ gives errors. 
 
 TARGETS=bin/printf bin/scanf bin/commandLineArguments \
- bin/passByReference bin/define bin/struct bin/constants
+ bin/passByReference bin/define bin/struct bin/constants bin/math
  
 all: bin ${TARGETS}
 
 bin:
 	mkdir -p bin
+
+bin/math: bin/math.o
+	${CC} -o bin/math ${CFLAGS} bin/math.o -lm
+
+bin/math.o: src/math.c
+	${CC} -c -o bin/math.o ${CFLAGS} src/math.c
 
 # Automatically generate rules
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
