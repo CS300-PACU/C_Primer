@@ -27,7 +27,7 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 # the list continues on the next line.  WARNING: There must be no characters
 # other than the newline after the \.  A blank space after the \ gives errors. 
 
-TARGETS=bin/main
+TARGETS=bin/printf bin/scanf
 
 all: bin ${TARGETS}
 
