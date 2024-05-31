@@ -24,9 +24,7 @@ int main (int argc, char* argv[]) {
 	int localVariable;
 	int* pPtrToHeapMemory;
 
-
 	pPtrToHeapMemory = (int*) malloc(sizeof(int));
-
 
 	printf("Address of local variable (on the stack) %p \n\n",
 	&localVariable);

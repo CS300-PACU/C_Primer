@@ -40,12 +40,9 @@ void updateInteger(int *pInt, int intValue) {
   ****************************************************************************/
 
 void updateArray(int aArray[], const int arraySize) {
-
 	for(int index = 0; index < arraySize; ++index) {
 		aArray[index] = aArray[index] * 2;
 	}
-
-
 }
 
  /****************************************************************************
