@@ -20,6 +20,6 @@
   Returned:	 		EXIT_SUCCESS
   ****************************************************************************/
 int main (int argc, char* argv[]) {
-  printf ("Hwllo World\n\n");
+  printf ("Hello World\n\n");
   return EXIT_SUCCESS;
 }
