@@ -46,8 +46,7 @@ void printPoint(PointData sPoint)
 void readPoint(PointData *psPoint)
 {
   // read an int from the keyboard, note the &
-  // scanf is a way to read non-string data 
-  // from the keyboard
+  // scanf is a way to read data from the keyboard
   //
   // the & takes the address of the member (x or y)
   //
@@ -57,7 +56,11 @@ void readPoint(PointData *psPoint)
   scanf("%d", &psPoint->x);
 
   printf("Y: ");
-  scanf("%d", &psPoint->y);
+	// you can use the * to dereference the pointer
+	// and then use the . 
+	// the ( ) are necessary since . has higher 
+	// precedence than *
+  scanf("%d", & (*psPoint).y);
 }
 
 
