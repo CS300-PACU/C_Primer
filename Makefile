@@ -29,7 +29,7 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 
 TARGETS=bin/printf bin/scanf bin/commandLineArguments \
  bin/passByReference bin/define bin/struct bin/constants bin/math \
- bin/memoryLayout
+ bin/memoryLayout bin/helloWorld
  
 all: bin ${TARGETS}
 
