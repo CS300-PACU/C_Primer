@@ -1,5 +1,5 @@
 /****************************************************************************
- File name:  		main.c
+ File name:  		test.c
  Author:				chadd williams
  Date:					May 31, 2024
  Class:					CS 300

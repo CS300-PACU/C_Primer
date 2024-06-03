@@ -36,11 +36,13 @@ all: bin ${TARGETS}
 bin:
 	mkdir -p bin
 
+# LINK STEP
 bin/math: bin/math.o
-	${CC} -o bin/math ${CFLAGS} bin/math.o -lm
+	clang -o bin/math -g bin/math.o -lm
 
+# COMPILE STEP
 bin/math.o: src/math.c
-	${CC} -c -o bin/math.o ${CFLAGS} src/math.c
+	clang -c -o bin/math.o -g -Wall src/math.c
 
 # Automatically generate rules
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
