@@ -4,11 +4,11 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-    {
-      "name": "(lldb) Launch", // Change name
+		{
+      "name": "(lldb) helloWorld", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
+      "program": "${workspaceFolder}/bin/helloWorld", // THIS IS IMPORTANT
       "args": [], // add comma separated list of args here.
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
@@ -16,35 +16,125 @@
       //   "settings set target.process.follow-fork-mode child"
       // ],
     },
-    {
-      "name": "(lldb) Launch with args", // Change name
+		{
+      "name": "(lldb) commandLineArguments", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
-      "args": ["64.59.225.81", "/chadd/cs360f21/LabHttp.html"], // add comma separated list of args here.
+      "program": "${workspaceFolder}/bin/commandLineArguments", // THIS IS IMPORTANT
+      "args": ["one", "two", "three"], // add comma separated list of args here.
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
-    },
-/*    {
-      "name": "(gdb) Launch with args", // Change name
-      "type": "cppdbg",
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },  
+		{
+      "name": "(lldb) constants", // Change name
+      "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
-      "args": ["64.59.225.81", "/chadd/cs360f21/LabHttp.html"], // add comma separated list of args here.
-      "stopAtEntry":  true, // THIS IS IMPORTANT 
+      "program": "${workspaceFolder}/bin/constants", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
       "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          }
-      ],
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
-    },*/
-
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) define", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/define", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },    
+		{
+      "name": "(lldb) math", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/math", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },	
+		{
+      "name": "(lldb) memoryLayout", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/memoryLayout", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) passByReference", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/passByReference", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },			
+		{
+      "name": "(lldb) printf", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/printf", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) scanf", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/scanf", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) struct", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/struct", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    },
+		{
+      "name": "(lldb) test", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/test", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
+    }
   ]
 }
