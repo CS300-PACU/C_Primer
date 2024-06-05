@@ -30,7 +30,7 @@ ENSCRIPT_FLAGS=-C -T 2 -p - -M Letter -Ec --color -fCourier8
 TARGETS=bin/printf bin/scanf bin/commandLineArguments \
  bin/passByReference bin/define bin/struct bin/constants bin/math \
  bin/memoryLayout bin/helloWorld bin/fileReading bin/test \
- bin/pointers bin/pointerToStaticData
+ bin/pointers bin/pointerToStaticData bin/howToTest
  
 all: bin ${TARGETS}
 
@@ -44,6 +44,16 @@ bin/math: bin/math.o
 # COMPILE STEP
 bin/math.o: src/math.c
 	clang -c -o bin/math.o -g -Wall src/math.c
+
+
+bin/howToTest: bin/howToTest.o bin/driverUtil.o
+	clang -o bin/howToTest -g bin/howToTest.o bin/driverUtil.o -lm
+
+bin/howToTest.o: src/howToTest.c 
+	clang -c -o bin/howToTest.o -g -Wall src/howToTest.c
+
+bin/driverUtil.o: src/driverUtil.c include/driverUtil.h
+	${CC} ${CFLAGS} -c -o bin/driverUtil.o src/driverUtil.c 
 
 # Automatically generate rules
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
