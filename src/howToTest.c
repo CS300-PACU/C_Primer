@@ -26,7 +26,7 @@
   ****************************************************************************/
 int findTheMaxInAnArray(int aData[], const int size) {
 	int max = 0;
-
+	// /nat *(int(*)[10])aData
 	for (int i=1; i<size ; ++i){
 		if (max < aData[i]) {
 			max = aData[i];

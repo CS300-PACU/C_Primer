@@ -50,7 +50,7 @@ bin/howToTest: bin/howToTest.o bin/driverUtil.o
 	clang -o bin/howToTest -g bin/howToTest.o bin/driverUtil.o -lm
 
 # Compile Tester
-bin/howToTest.o: src/howToTest.c 
+bin/howToTest.o: src/howToTest.c include/driverUtil.h
 	clang -c -o bin/howToTest.o -g -Wall src/howToTest.c
 
 # Compiler Test Framework
