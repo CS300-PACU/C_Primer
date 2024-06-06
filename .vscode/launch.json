@@ -147,6 +147,18 @@
       // "initCommands": [ // add commands to send to the debugger (LLDB)
       //   "settings set target.process.follow-fork-mode child"
       // ],
+    },
+		{
+      "name": "(lldb) howToTest", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/howToTest", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+      // "initCommands": [ // add commands to send to the debugger (LLDB)
+      //   "settings set target.process.follow-fork-mode child"
+      // ],
     }
   ]
 }
