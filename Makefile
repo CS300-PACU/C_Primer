@@ -45,15 +45,17 @@ bin/math: bin/math.o
 bin/math.o: src/math.c
 	clang -c -o bin/math.o -g -Wall src/math.c
 
-
+# Link
 bin/howToTest: bin/howToTest.o bin/driverUtil.o
 	clang -o bin/howToTest -g bin/howToTest.o bin/driverUtil.o -lm
 
+# Compile Tester
 bin/howToTest.o: src/howToTest.c 
 	clang -c -o bin/howToTest.o -g -Wall src/howToTest.c
 
+# Compiler Test Framework
 bin/driverUtil.o: src/driverUtil.c include/driverUtil.h
-	${CC} ${CFLAGS} -c -o bin/driverUtil.o src/driverUtil.c 
+	clang -g -Wall -c -o bin/driverUtil.o src/driverUtil.c 
 
 # Automatically generate rules
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
